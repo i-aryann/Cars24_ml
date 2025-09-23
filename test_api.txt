@@ -1,0 +1,21 @@
+
+postman 
+http://127.0.0.1:5000/predict
+
+{
+    "year": 2019,
+    "km_driven": 12000,
+    "mileage": 19.7,
+    "engine": 900,
+    "max_power":46.3,
+    "age":3,
+    "Individual":1,
+    "Trustmark Dealer":0,
+    "Diesel":0,	
+    "Electric":0,
+    "LPG":0,
+    "Petrol":1,
+    "Manual":1,
+    "5":1,	
+    ">5":0
+}
