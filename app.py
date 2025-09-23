@@ -5,7 +5,9 @@ import joblib
 app = Flask(__name__)
 
 pickle_model = open('./model.pkl', 'rb')
+pickle_scaler= open('./scaler.pkl','rb')
 clf = joblib.load(pickle_model)
+scl=  joblib.load(pickle_scaler)
 
 
 @app.route('/ping',methods=['GET'])
@@ -33,7 +35,7 @@ def predict():
     age2=car_price[">5"]
 
 
-    result= clf.predict([[year,km_driven,mileage,engine,power,age,Individual,dealer,diesel,electric,lpg,petrol,manual,age1,age2]])
+    result = clf.predict(scl.transform([[year, km_driven, mileage, engine, power, age, Individual, dealer, diesel, electric, lpg, petrol, manual, age1, age2]]))
     
     return "Estimated Price of the Car is: "+ str(result[0])
 
