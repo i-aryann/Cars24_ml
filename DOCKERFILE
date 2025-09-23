@@ -1,4 +1,5 @@
 FROM python:3.13-slim-bookworm
+
 WORKDIR /Cars24_app_docker
 
 RUN python3 -m pip install --upgrade pip
