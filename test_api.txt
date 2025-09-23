@@ -19,3 +19,12 @@ http://127.0.0.1:5000/predict
     "5":1,	
     ">5":0
 }
+
+
+
+
+docker running cmds
+
+pwd for file location
+
+docker build -t car_price_pred .
