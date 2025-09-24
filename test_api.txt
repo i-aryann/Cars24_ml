@@ -30,4 +30,15 @@ pwd for file location
 docker build -t car_price_pred .
 
 
-docker run -p 8080 -d car_price_pred
+docker run -p 8080:5000 -d car_price_pred
+
+
+
+to push to docker repo
+docker login
+
+(venv) PS E:\Cars 24> docker tag car_price_pred aryanondock/car_price_pred:latest
+(venv) PS E:\Cars 24> docker push aryanondock/car_price_pred:latest
+
+
+
