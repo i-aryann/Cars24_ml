@@ -28,3 +28,6 @@ docker running cmds
 pwd for file location
 
 docker build -t car_price_pred .
+
+
+docker run -p 8080 -d car_price_pred
